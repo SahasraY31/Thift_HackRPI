@@ -119,6 +119,14 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   line-height: 1.2;
 }
 
+/*.centered-box {
+  text-align: center;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}*/
+
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
   color: rgb(26,103,25); 
@@ -478,6 +486,14 @@ output {
 
 iframe {
   border: 0;
+}
+
+.spacing {
+  padding-left: 20%;
+  padding-right: 20%;
+  border-style: solid;
+  
+  
 }
 
 summary {

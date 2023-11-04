@@ -1,0 +1,4 @@
+node_modules
+venv
+chat_function/venv
+.DS_Store

@@ -14,6 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="./ThriftForStudents/css/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="/ThriftForStudents/js/account.js"></script>
 </head>
 
 <body>
@@ -40,6 +41,34 @@
             </div>
         </div>
     </nav>
+    <div id="bodyBlock">
+        <h1>Create an Account</h1>
+        <form id="addForm" name="addForm" action="#" method="post" onsubmit="return validate(this);">
+           <fieldset>
+              <legend>Contact Information</legend>
+              <div class="text-center">
+  
+                 <label class="field">First Name:</label>
+                 <div class="value"><input type="text" size="60" value="" name="firstName" id="firstName" /></div>
+  
+                 <label class="field">Last Name:</label>
+                 <div class="value"><input type="text" size="60" value="" name="lastName" id="lastName" /></div>
+  
+                 <label class="field">Date of Birth:</label>
+                 <div class="value"><input type="text" size="60" value="" name="dob" id="dob" /></div>
+  
+                 <label class="field">Email:</label>
+                 <div class="value"><input type="text" size="60" value="" name="email" id="email" /></div>
+  
+                 <label class="field">Password:</label>
+                 <div class="value"><input type="text" size="60" value="" name="password" id="password" /></div>
+  
+                 <input class="button" type="submit" value="Submit" id="save" name="save" onsubmit="return validate(this);"/>
+  
+              </div> 
+           </fieldset>
+        </form>   
+    </div>
     <footer class="py-5 bg-dark">
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; UThrift 2023</p></div>
     </footer>

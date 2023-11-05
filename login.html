@@ -22,7 +22,6 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <a href="/ThriftForStudents/index.html"><img src="/UTHRIFTLogo.png" alt="Logo" class="logo"/></a>
-            <a class="navbar-brand" href="#!">UThrift</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -40,7 +39,27 @@
             </div>
         </div>
     </nav>
+    <div class= "text-center">
+        <form id="addForm" name="addForm" action="#" method="post" onsubmit="return validate(this);">
+           <fieldset>
+              <legend>Log-In</legend>
+              <div class="formData">
+  
+                 <label for = "userName" class="field">Username:</label>
+                 <div class="value"><input type="text" size="60" value="" name="userName" id="userName" /></div>
+  
+                 <label for = "password" class="field">Password:</label>
+                 <div class="value"><input type="text" size="60" value="" name="password" id="password" /></div>
+                 </div>
+                 <input type="submit" value="Log-In" id="save" name="save" />
+              </div>
+           </fieldset>
+        </form>
+        <script>  document.addForm.userName.focus(); </script>
+     </div>
+     <br>
     <footer class="py-5 bg-dark">
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; UThrift 2023</p></div>
     </footer>
 </body>
+</html>

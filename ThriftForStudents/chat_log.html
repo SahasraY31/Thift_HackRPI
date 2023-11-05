@@ -1,0 +1,233 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<meta name="description" content=""/>
+		<meta name="author" content=""/>
+		<title>Accessories</title>
+		<!-- Favicon-->
+		<link
+		rel="icon" type="image/x-icon" href="./UTHRIFTLogo.png"/>
+		<!-- Bootstrap icons-->
+		<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
+		<!-- Core theme CSS (includes Bootstrap)-->
+		<link href="./css/styles.css" rel="stylesheet"/>
+
+	</head>
+	<body>
+		<!-- Navigation-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<h1>
+                <a href="/ThriftForStudents/index.html"><img src="/UTHRIFTLogo.png" alt="Logo" class="logo"/></a>
+            </h1>
+			<div class="container px-4 px-lg-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item "><a class="nav-link" href="../clothes.html" role="button" aria-current="page" aria-expanded="false">Clothes</a></li>
+                        <li class="nav-item"><a class="nav-link" id="navbarDropdown" href="../shoes.html" role="button"  aria-expanded="false">Shoes</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../accessories.html">Accessories</a></li>
+                    </ul>
+                    <a href="./chat_log.html">
+                        <button class="btn btn-outline-dark">
+                            <i class="bi-phone-fill me-1"></i>
+                            Chats
+                        </button>
+                    </a>
+                </div>
+            </div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="list-group chat-list">
+						<a href="#" class="list-group-item list-group-item-action" onclick="displayChat('chat1')">Chat with david123</a>
+						<a href="#" class="list-group-item list-group-item-action" onclick="displayChat('chat2')">Chat with sahasra321</a>
+						<a href="#" class="list-group-item list-group-item-action" onclick="displayChat('chat3')">Chat with ananya132</a>
+
+						<!-- Add more chat list items as needed -->
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="chat-display" id="chatDisplay">
+						<p class="lead">Select a chat from the list to display the conversation.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function helper() {
+
+                console.log('am i being called')
+				const send_button = document.getElementById('send_button');
+				const current_list = document.getElementById('unorderedlist');
+				document.addEventListener("DOMContentLoaded", function () {
+
+					send_button.addEventListener("click", function () { // Create a new list item
+						console.log('testing');
+						const newItem = document.createElement("li");
+						const break_itm = document.createElement("br");
+						newItem.innerHTML = `
+            <strong>You:</strong>
+            ${
+							document.getElementById("msg_input").value
+						}
+            `;
+
+						// Append the new item to the current list
+						current_list.appendChild(newItem);
+						current_list.appendChild(break_itm);
+					});
+				});
+
+				document.addEventListener("keydown", function (event) {
+					if (event.key === "Enter") { // Trigger the button's click event when Enter is pressed
+						console.log('testing');
+						const newItem = document.createElement("li");
+						const break_itm = document.createElement("br");
+						newItem.innerHTML = `
+            <strong>You:</strong>
+            ${
+							document.getElementById("msg_input").value
+						}
+            `;
+
+						// Append the new item to the current list
+						current_list.appendChild(newItem);
+						current_list.appendChild(break_itm);
+					}
+				});
+			}
+			function displayChat(chatId) {
+				const chatDisplay = document.getElementById("chatDisplay");
+
+				if (chatId === "chat1") {
+					chatDisplay.innerHTML = `
+                <div class="container mt-5">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="card">
+						<div class="card-header">
+							Chatting with david123
+						</div>
+						<div class="card-body" style="height: 300px; overflow-y: auto;">
+							<ul id="unorderedlist" class="list-unstyled">
+								<li>
+									<strong>You:</strong>
+									Hello! I'm interested in buying the blue designed T-shirt!
+								</li>
+								<br>
+
+									<li>
+										<strong>david123:</strong>
+										Hi there! We can meet on campus. Are you free at 12 p.m.?
+									</li>
+									<br>
+
+										<!-- More chat messages go here -->
+									</ul>
+								</div>
+								<div class="card-footer">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Type your message" id="msg_input">
+											<div class="input-group-append">
+												<button id="send_button" class="btn btn-primary">Send</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                `;
+				} else if (chatId === "chat2") { // You can define the conversation for chat2 in a similar way
+					chatDisplay.innerHTML = `
+                <div class="container mt-5">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="card">
+						<div class="card-header">
+							Chatting with sahsara321
+						</div>
+						<div class="card-body" style="height: 300px; overflow-y: auto;">
+							<ul id="unorderedlist" class="list-unstyled">
+								<li>
+									<strong>You:</strong>
+									Hello!
+								</li>
+								<br>
+
+									<li>
+										<strong>sahsara321:</strong>
+										Hi there! 
+									</li>
+									<br>
+
+										<!-- More chat messages go here -->
+									</ul>
+								</div>
+								<div class="card-footer">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Type your message" id="msg_input">
+											<div class="input-group-append">
+												<button id="send_button" class="btn btn-primary">Send</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                `;
+				} else if (chatId === "chat3") { // You can define the conversation for chat2 in a similar way
+					chatDisplay.innerHTML = `
+                <div class="container mt-5">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="card">
+						<div class="card-header">
+							Chatting with ananya132
+						</div>
+						<div class="card-body" style="height: 300px; overflow-y: auto;">
+							<ul id="unorderedlist" class="list-unstyled">
+								<li>
+									<strong>You:</strong>
+									Hi I like what you posted on Uthrift!
+								</li>
+								<br>
+
+									<li>
+										<strong>ananya132:</strong>
+										Thanks!!!!
+									</li>
+									<br>
+
+										<!-- More chat messages go here -->
+									</ul>
+								</div>
+								<div class="card-footer">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Type your message" id="msg_input">
+											<div class="input-group-append">
+												<button id="send_button" class="btn btn-primary">Send</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                `;
+				}
+                helper();
+			}
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Core theme JS-->
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

@@ -216,9 +216,9 @@ app.get('/fetch-all-conversations', async (req, res) => {
             // Get the participants for each conversation
 
 
-            console.log("message: ");
+            // console.log("message: ");
             // await conversation.join();
-            // get the messages paginator the latest 30 messages
+            // // get the messages paginator the latest 30 messages
             // let messagesPaginator = await conversation.getMessages(30, 0, "backwards");
 
             // // get messages

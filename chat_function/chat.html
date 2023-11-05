@@ -38,12 +38,6 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#!">Men</a></li>
 
-                                <li><a class="dropdown-item" href="#!">Women</a></li>
-                                <li><a class="dropdown-item" href="#!">Unisex</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Accessories</a></li>
-
 
                     </ul>
                     <form class="d-flex">
@@ -56,7 +50,6 @@
                 </div>
             </div>
         </nav>
-
 
 
 		<div class="container mt-5">
@@ -85,7 +78,7 @@
 								</div>
 								<div class="card-footer">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Type your message">
+										<input type="text" class="form-control" placeholder="Type your message" id="msg_input">
 											<div class="input-group-append">
 												<button id="send_button" class="btn btn-primary">Send</button>
 											</div>
@@ -99,22 +92,45 @@
 					<!-- Core theme JS-->
 					<script src="js/scripts.js"></script>
 					<script>
+						const send_button = document.getElementById('send_button');
+						const current_list = document.getElementById('unorderedlist');
 						document.addEventListener("DOMContentLoaded", function () {
-							const send_button = document.getElementById('send_button');
-							const current_list = document.getElementById('unorderedlist');
 
 							send_button.addEventListener("click", function () { // Create a new list item
-								console.log('testing')
+								console.log('testing');
 								const newItem = document.createElement("li");
+								const break_itm = document.createElement("br");
 								newItem.innerHTML = `
 									<strong>You:</strong>
-										Sounds good, see you then!
+									${
+									document.getElementById("msg_input").value
+								}
 									`;
 
 								// Append the new item to the current list
 								current_list.appendChild(newItem);
+								current_list.appendChild(break_itm);
 							});
+						});
+
+						document.addEventListener("keydown", function (event) {
+							if (event.key === "Enter") { // Trigger the button's click event when Enter is pressed
+								console.log('testing');
+								const newItem = document.createElement("li");
+								const break_itm = document.createElement("br");
+								newItem.innerHTML = `
+									<strong>You:</strong>
+									${
+									document.getElementById("msg_input").value
+								}
+									`;
+
+								// Append the new item to the current list
+								current_list.appendChild(newItem);
+								current_list.appendChild(break_itm);
+							}
 						});
 					</script>
 				</body>
 			</html>
+

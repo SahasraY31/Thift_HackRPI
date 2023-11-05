@@ -8231,8 +8231,8 @@ textarea.form-control-lg {
 
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: rgba(25, 135, 84, 1.0);
-}
+  background-color: rgba(25, 135, 84, 2.0);
+s}
 
 .bg-black {
   --bs-bg-opacity: 1;
